@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Raleway:wght@100&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Lugrasimo&family=Raleway:wght@100&family=Roboto:wght@400;700&display=swap');
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%); 
+    }
+    to {
+        transform: translateY(0); 
+    }
+}
+
+body {
+    background: linear-gradient(to bottom, #8e69e4, #201b20);
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh;
+    margin: 0;
+}
+
+
+.title {
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    margin-bottom: 50px;
+    color:  #8e69e4dc;
+    text-align: center;
+}
+
+.container {
+    width: 400px;
+    height: 600px;
+    perspective: 800px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: slideIn 1s forwards; 
+}
+
+
+.front, .back {
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all 1s;
+    border: 2px solid #c28fef;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.front {
+    background-color: #272727;
+    color: #fff;
+    height: 100%;
+}
+
+.back {
+    background-color: #c28fef;
+    padding: 20px;
+    transform: rotateY(-180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 100%; 
+    overflow-y: auto; 
+}
+.text-content {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.back h2 {
+    margin: 0 0 10px 0;
+    font-family: 'Hind', sans-serif;
+}
+
+.back p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.back div {
+    margin: 0;
+    padding: 0;
+}
+
+.card.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.card.flipped .back {
+    transform: rotateY(0);
+}
+
+::-webkit-scrollbar {
+    width: 10px; /* Largura da scrollbar */
+}
+
+.aceito {
+    padding: 10px 20px;
+    background-color: #1f8b36ab;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 65px;
+}
+
+.aceito:hover {
+    background-color: #1f8b3679;
+}
+
+.recuso:hover {
+    background-color: #b9220769;
+}
+
+.recuso {
+    padding: 10px 20px;
+    background-color: #b92207ab;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;  
+}
+
+
+
+
